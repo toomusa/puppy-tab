@@ -15,7 +15,7 @@ $(document).on("click", "#startBtn", async () => {
     await $.get("/scrape", function (data) {
       console.log(count, data);
       data.forEach(name => {
-        if (name === "Bella" || name === "Otis") {
+        if (name === "Bella" || name === "Huck") {
           clearInterval(interval);
           console.log("PUPPY IS BORN")
           $.get("https://cors-anywhere.herokuapp.com/https://maker.ifttt.com/trigger/new_post/with/key/bvTJmlsBTGVBzZbqL2yqA9", function () {
